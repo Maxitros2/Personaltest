@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="PersonaTest.LoginPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PersonaTest"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border CornerRadius="10" HorizontalAlignment="Center" Height="400" VerticalAlignment="Center" Width="300" Background="#FFFAF4DE" BorderBrush="#FFF7EED1" BorderThickness="3" >
+        <Grid RenderTransformOrigin="0.5,0.5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Margin="0" Orientation="Vertical" Width="238">
+                <Label Content="Фамилия" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="24"/>
+                <TextBox x:Name="SerName" HorizontalAlignment="Center" Height="33" Margin="0,0,-1,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="239" FontFamily="Times New Roman" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Margin="28,0" Orientation="Vertical" Width="238" Grid.Row="1">
+                <Label Content="Имя" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="24"/>
+                <TextBox x:Name="Name" HorizontalAlignment="Center" Height="33" Margin="0,0,-1,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="239" FontFamily="Times New Roman" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Margin="28,0" Orientation="Vertical" Width="238" Grid.Row="2">
+                <Label Content="Отчество" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="24"/>
+                <TextBox x:Name="ser2" HorizontalAlignment="Center" Height="33" Margin="0,0,-1,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="239" FontFamily="Times New Roman" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Margin="28,0" Orientation="Vertical" Width="238" Grid.Row="3">
+                <Label Content="Должность" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="24"/>
+                <Grid Height="42">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="A" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF2D4BD1" BorderThickness="2" PreviewMouseMove="Border_PreviewMouseMove" MouseLeave="Border_MouseLeave" PreviewMouseDown="A_PreviewMouseDown" >
+                        <Label Content="A" FontSize="24" Padding="0" HorizontalContentAlignment="Center" Background="#FFC4F3F5" Height="32" Width="32"/>
+                    </Border>
+                    <Border x:Name="B" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#002D4BD1" BorderThickness="2" Grid.Column="1" PreviewMouseMove="Border_PreviewMouseMove" MouseLeave="Border_MouseLeave" PreviewMouseDown="A_PreviewMouseDown" >
+                        <Label Content="B" FontSize="24" Padding="0" HorizontalContentAlignment="Center" Background="#FFC4F3F5" Height="32" Width="32"
+                               />
+                    </Border>
+                    <Border x:Name="C" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#002D4BD1" BorderThickness="2" Grid.Column="2" PreviewMouseMove="Border_PreviewMouseMove" MouseLeave="Border_MouseLeave" PreviewMouseDown="A_PreviewMouseDown">
+                        <Label Content="C" FontSize="24" Padding="0" HorizontalContentAlignment="Center" Background="#FFC4F3F5" Height="32" Width="32" Grid.Column="2"/>
+                    </Border>
+                </Grid>
+            </StackPanel>
+            <Button x:Name="StartTest" Content="Начать тест" HorizontalAlignment="Center" Margin="0" Grid.Row="4" VerticalAlignment="Center" FontSize="24" Background="#FFDAE0E0" BorderBrush="{x:Null}" Width="189"/>
+            <Border x:Name="DownloadBaseClick" PreviewMouseMove="Border_PreviewMouseMove" MouseLeave="Border_MouseLeave" HorizontalAlignment="Left" Height="39" Margin="314,0,-59,0" VerticalAlignment="Top" Width="39" Background="#FFFAF4DE" BorderBrush="#FFF7EED1" BorderThickness="1" >
+                <Image Source="/PersonaTest;component/Resources/-get-app_90101.png"/>
+
+            </Border>
+
+        </Grid>
+    </Border>
+</UserControl>

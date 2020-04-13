@@ -1,0 +1,38 @@
+﻿<Window x:Class="PersonaTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonaTest"
+        mc:Ignorable="d"
+        Title="Тестирование" Height="511.421" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid Background="#FFFEFBF4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="44*"/>
+                <RowDefinition Height="99*"/>
+                <RowDefinition x:Name="QuestionCount" Height="298*"/>
+                <RowDefinition Height="42*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="Question_textblock" Margin="10,14" TextWrapping="Wrap" Grid.Row="1" FontSize="16"/>
+            <Label x:Name="QuestionCount1" Padding="0" Content="Вопрос" HorizontalAlignment="Left" Margin="0,8" VerticalAlignment="Center" FontSize="22"/>
+            <Label x:Name="FIOLABEL" Padding="0" Content="ФИО" HorizontalAlignment="Right" Margin="0,8" VerticalAlignment="Center" FontSize="22"/>
+            <Canvas Grid.Row="2" Background="#FFF7F7F7">
+                <StackPanel x:Name="AnswerPanel" Margin="0" Height="262" Width="792"/>
+            </Canvas>
+            <Button x:Name="StartTest" Content="Cледующий вопрос" HorizontalAlignment="Right" Margin="0,1,0,3" Grid.Row="3" VerticalAlignment="Center" FontSize="24" Background="#FFDAE0E0" BorderBrush="{x:Null}" Width="269" Click="StartTest_Click_1" Height="38"/>
+
+        </Grid>
+        <Grid x:Name="LoginGrid" Margin="0" Background="#FFFEFBF4" d:IsHidden="True">
+            <local:LoginPage x:Name="_loginPage" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="OtchetCanvas" Margin="0" Background="#FFFEFBF4" d:IsHidden="True">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                <Label x:Name="FIOLAST" Padding="0" Content="ФИО" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="0"/>
+                <Label x:Name="OtchetCount" Padding="0" Content="Вы ответили правильно на" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Margin="0"/>
+                <Button x:Name="StartTest_Copy" Content="Показать отчет" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="24" Background="#FFDAE0E0" BorderBrush="{x:Null}" Width="269" Click="StartTest_Copy_Click"/>
+                <Button x:Name="StartTest_Copy1" Content="Начать заново" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="24" Background="#FFDAE0E0" BorderBrush="{x:Null}" Width="269" Click="StartTest_Copy1_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
